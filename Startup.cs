@@ -34,6 +34,10 @@ namespace ping_pong_service
                 {
                     await context.Response.WriteAsync("Hello World!");
                 });
+                endpoints.MapGet("/ping", async context =>
+                {
+                    await context.Response.WriteAsync("pong");
+                });
             });
         }
     }
